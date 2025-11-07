@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Visitor Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="login-container">
+        <h2>Login to Continue</h2>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+                <small class="hint">Username must be at least 4 characters long</small>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <small class="hint">Password must have at least 8 characters, 1 uppercase, and 1 number</small>
+            </div>
+
+            <div class="input-group">
+                <label for="role">Select Role</label>
+                <select id="role" required>
+                    <option value="">--Select Role--</option>
+                    <option value="student">Student Resident</option>
+                    <option value="manager">Hostel Manager</option>
+                    <option value="security">Security Officer</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="message"></p>
+
+        <p class="switch-form">
+            Don’t have an account? <a href="#" id="showSignup">Sign Up</a>
+        </p>
+
+        <p class="terms-text">
+            By continuing, you agree to <strong>Visitor Management (VM)</strong>’s
+            <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+        </p>
+    </div>
+
+    <!-- Sign Up Form (Initially Hidden) -->
+    <div class="signup-container" id="signupContainer">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" placeholder="Choose a username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" placeholder="Create a password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="newRole">Role</label>
+                <select id="newRole" required>
+                    <option value="">--Select Role--</option>
+                    <option value="student">Student Resident</option>
+                    <option value="manager">Hostel Manager</option>
+                    <option value="security">Security Officer</option>
+                </select>
+            </div>
+
+            <button type="submit">Sign Up</button>
+            <p id="signupMessage"></p>
+            <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
