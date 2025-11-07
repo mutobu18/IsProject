@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - VMS</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">VMS</h2>
+    <div class="profile">
+        <div class="avatar">
+         <img src="user.jpg" alt="User Icon">
+        </div>
+            <p class="email">student@gmail.com</p>
+    </div>
+
+      <div class="menu">
+    <button class="menu-btn" id="btnNotifications">🔔 Notifications</button>
+    <button class="menu-btn" id="btnNewRequest">📝 New Request</button>
+    <button class="menu-btn" id="btnSettings">⚙️ Settings</button>
+      </div>
+
+
+        <button class="logout">Logout</button>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main">
+
+        <h2 class="title">Student Dashboard</h2>
+
+        <button class="status-btn">Check Request Status</button>
+
+        <!-- DASHBOARD CARDS -->
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>Total Requests</h3>
+                <button class="details-btn">View details</button>
+            </div>
+
+            <div class="card">
+                <div class="icon">✅</div>
+                <h3>Request Accepted</h3>
+                <button class="details-btn">View details</button>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Total Reports</h3>
+                <button class="details-btn">View details</button>
+            </div>
+        </div>
+
+    </main>
+</div>
+<!-- NEW REQUEST FORM (HIDDEN BY DEFAULT) -->
+<section class="request-form" id="requestForm">
+    <h2>New Visitor Request</h2>
+
+    <form id="visitorForm">
+        <label>Visitor Full Name</label>
+        <input type="text" id="visitorName" placeholder="Enter visitor name" required>
+
+        <label>Visit Date</label>
+        <input type="date" id="visitDate" required>
+
+        <label>Reason for Visit</label>
+        <textarea id="visitReason" placeholder="State your purpose" required></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</section>
+</body>
+</html>
