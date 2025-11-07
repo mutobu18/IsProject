@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Visitor Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Logo and Title -->
+    
+            <h1>Visitor Management System</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <!-- Dashboard Container -->
+    <main class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+            <ul>
+                <li class="active">🏠 Dashboard</li>
+                <li>🧾 Register Visitor</li>
+                <li>📋 Visitor History</li>
+                <li>👤 Profile</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="content">
+            <h2>Welcome, Student Resident 👋</h2>
+            <p>This is your dashboard. From here you can register new visitors, check their status, and manage your account.</p>
+
+            <!-- Visitor Registration Form -->
+            <div class="form-card">
+                <h3>Register New Visitor</h3>
+                <form id="visitorForm">
+                    <div class="input-group">
+                        <label for="visitorName">Visitor Name</label>
+                        <input type="text" id="visitorName" placeholder="Enter visitor name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="visitorID">Visitor ID/Passport</label>
+                        <input type="text" id="visitorID" placeholder="Enter ID number" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="visitDate">Visit Date</label>
+                        <input type="date" id="visitDate" required>
+                    </div>
+                    <button type="submit">Submit Request</button>
+                </form>
+                <p id="formMessage"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Visitor Management System | Student Dashboard</p>
+    </footer>
+
+    <script src="student.js"></script>
+</body>
+</html>
