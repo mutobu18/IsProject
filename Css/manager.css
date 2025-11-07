@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+/* Layout container */
+.container {
+  display: flex;
+  height: 100vh;
+  border-radius: 25px;
+;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background:#1E90FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.circle2 {
+  width: 80px;
+  height: 80px;
+  background-image: url('../Images/profile1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.email {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+nav li {
+  text-align: center;
+  padding: 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav li:hover {
+  background: #cccccc;
+  border-radius: 5px;
+}
+
+.logout {
+  margin-top: auto;
+  padding: 10px 25px;
+  background:#0D47A1;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+}
+
+.main {
+  flex: 1;
+  padding: 40px;
+  background:white;
+  border-radius: 50px;
+  margin: 45px;
+  border-style: outset;
+  width:auto;
+}
+
+
+.main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.check-btn {
+  float: right;
+  top: 50%;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  background-color: #0D47A1;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border: 2px solid #0D47A1;
+  border-radius: 50px;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-image: url('../Images/request.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.circle1 {
+  width: 80px;
+  height: 80px;
+  background-image: url('../Images/received.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.view-btn {
+  border: 1px solid #333;
+  background: transparent;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
