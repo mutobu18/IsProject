@@ -7,78 +7,91 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-   <!-- LOGIN FORM -->
-    <div class="login-container" id="loginContainer">
-        <h2><strong>VMS</strong></h2>
 
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter username or email" required>
-                <small class="hint">Enter any username </small>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter password" required>
-                <p class="password-error" id="loginPassError"></p>
-                <small class="hint">Password must be exactly 6 characters</small>
-            </div>
-            <div class="input-group">
-                <label for="role">Select Role</label>
-                <select id="role" required>
-                    <option value="">--Select Role--</option>
-                    <option value="student">Student Resident</option>
-                    <option value="manager">Hostel Manager</option>
-                    <option value="security">Security Officer</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
-            <button type="submit">Login</button>
-            <div class="forgot-container">
-    <a href="#" id="forgotPassword">Forgot Password?</a>
+<!-- LOGIN FORM -->
+<div class="login-container" id="loginContainer">
+    <h2><strong>VMS</strong></h2>
+
+    <form id="loginForm" method="POST" action="login.php">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username or email" required>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <p class="password-error" id="loginPassError"></p>
+            <small class="hint">Password must be exactly 6 characters</small>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="switch-links">
+            <a href="#" id="showSignup">Create Account</a>
+            <a href="#" id="showForgot">Forgot Password?</a>
+        </div>
+    </form>
 </div>
-        </form>
-        <p id="message"></p>
-        <p class="switch-form">
-            Don’t have an account? <a href="#" id="showSignup">Sign Up</a>
+
+
+
+<!-- SIGN-UP FORM -->
+<div class="signup-container" id="signupContainer">
+    <h2>Create an Account</h2>
+
+    <form id="signupForm">
+        <div class="input-group">
+            <label for="signupUsername">Username</label>
+            <input type="text" id="signupUsername" placeholder="Choose a username" required>
+        </div>
+
+        <div class="input-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Create a password" required>
+            <p class="password-error" id="signupPassError"></p>
+            <small class="hint">Password must be exactly 6 characters</small>
+        </div>
+
+        <div class="input-group">
+            <label for="signupRole">Select Role</label>
+            <select id="signupRole" required>
+                <option value="">--Select Role--</option>
+                <option value="Student">Student Resident</option>
+                <option value="Manager">Hostel Manager</option>
+                <option value="Security">Security Officer</option>
+            </select>
+        </div>
+
+        <button type="submit">Sign Up</button>
+        <p id="signupMessage"></p>
+
+        <p class="switch-form">Already have an account?
+            <a href="#" id="showLogin">Login</a>
         </p>
-    </div>
-    <!-- SIGNUP FORM -->
-    <div class="signup-container" id="signupContainer">
-        <h2>Create an Account</h2>
+    </form>
+</div>
 
-        <form id="signupForm">
-            <div class="input-group">
-                <label for="signupUsername">Username</label>
-                <input type="text" id="signupUsername" placeholder="Choose a username" required>
-            </div>
 
-            <div class="input-group">
-                <label for="signupPassword">Password</label>
-                <input type="password" id="signupPassword" placeholder="Create a password" required>
-                <p class="password-error" id="signupPassError"></p>
-                <small class="hint">Password must be exactly 6 characters</small>
-            </div>
 
-            <div class="input-group">
-                <label for="signupRole">Role</label>
-                <select id="signupRole" required>
-                    <option value="">--Select Role--</option>
-                    <option value="student">Student Resident</option>
-                    <option value="manager">Hostel Manager</option>
-                    <option value="security">Security Officer</option>
-                </select>
-            </div>
+<!-- FORGOT PASSWORD -->
+<div class="forgot-container" id="forgotContainer">
+    <h2>Reset Password</h2>
 
-            <button type="submit">Sign Up</button>
-            <p id="signupMessage"></p>
+    <form id="forgotForm">
+        <div class="input-group">
+            <label for="forgotEmail">Enter your email</label>
+            <input type="email" id="forgotEmail" placeholder="example@gmail.com" required>
+        </div>
 
-            <p class="switch-form">
-                Already have an account? <a href="#" id="showLogin">Login</a>
-            </p>
-        </form>
-    </div>
+        <button type="submit">Reset</button>
 
-    <script src="login.js"></script>
+        <p class="switch-form">
+            Back to <a href="#" id="backToLogin">Login</a>
+        </p>
+    </form>
+</div>
+
+<script src="login.js"></script>
 </body>
 </html>
